@@ -21,3 +21,7 @@ Any static host works — GitHub Pages, Netlify, Vercel, Cloudflare Pages. Just 
 
 - All motion is disabled under `prefers-reduced-motion`.
 - The contract address lives in one place (`#caText` in `index.html`) — update it there when it's announced.
+
+### Vercel
+
+The repo is a static site with no build step. In Vercel: **Add New → Project → import this repo**, leave the framework as **Other**, leave build/output settings empty, and deploy. `vercel.json` handles clean URLs and cache headers.
