@@ -315,7 +315,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <div><b>RENOUNCED</b><span>Contract</span></div>
   </div>
   <div class="ca">
-    <code id="caText">CA: announced only on 𝕏 — @secretcoinzec</code>
+    <code id="caText" data-ca="CCvEqeaBXKR1tfuEiYbxY1gPDduHF5PVM5MoeuXtSjEJ">CCvEqeaBXKR1tfuEiYbxY1gPDduHF5PVM5MoeuXtSjEJ</code>
     <button class="copy" id="copyBtn" type="button">Copy</button>
   </div>
   <p class="disc">Verify the address against the official 𝕏 account before touching anything. Impersonators are the oldest trick in the book.</p>
@@ -344,7 +344,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <section class="wrap rv" style="padding-top:0">
   <details open><summary>Affiliated with Zcash?</summary><p>No. $PRIVACY is an independent, community-made memecoin that borrows its attitude from the privacy movement. Fans, not spokespeople.</p></details>
-  <details><summary>Where's the contract address?</summary><p>Only from @secretcoinzec on 𝕏. Anywhere else — DMs especially — it's a scam until proven otherwise.</p></details>
+  <details><summary>Where's the contract address?</summary><p>Right above: <code>CCvEqeaBXKR1tfuEiYbxY1gPDduHF5PVM5MoeuXtSjEJ</code>. Cross-check it against @secretcoinzec on 𝕏 — anywhere else, DMs especially, it's a scam until proven otherwise.</p></details>
   <details><summary>Is this an investment?</summary><p>No. No intrinsic value, no yield, no promise of returns. It's a sticker, not a security.</p></details>
 </section>
 
@@ -516,7 +516,8 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 })();
 
 document.getElementById('copyBtn').addEventListener('click', function(){
-  var b = this, t = document.getElementById('caText').textContent;
+  var el = document.getElementById('caText');
+  var b = this, t = el.getAttribute('data-ca') || el.textContent;
   var done = function(){ b.textContent = 'Copied ✓'; setTimeout(function(){ b.textContent = 'Copy'; }, 1600); };
   if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, done);
   else done();
