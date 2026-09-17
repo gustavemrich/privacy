@@ -1,6 +1,6 @@
-# SECRET — privacy is normal
+# PRIVACY — privacy is normal
 
-Single-page site for the $SECRET memecoin. Zcash-inspired, purple/orange, shielded-by-vibes.
+Single-page site for the $PRIVACY memecoin. Zcash-inspired, purple/orange, shielded-by-vibes.
 
 - `index.html` — the whole site (no build step, no dependencies beyond Google Fonts)
 - Community: [𝕏 @secretcoinzec](https://x.com/secretcoinzec)

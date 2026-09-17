@@ -3,225 +3,249 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SECRET — Privacy Is Normal</title>
-<meta name="description" content="$SECRET is a shielded-by-vibes memecoin for people who think privacy is normal. Purple pills, orange flames, zero surveillance." />
-<meta property="og:title" content="SECRET — Privacy Is Normal" />
+<title>PRIVACY — Privacy Is Normal</title>
+<meta name="description" content="$PRIVACY is a shielded memecoin for people who think privacy is normal. Purple pills, orange flames, zero surveillance." />
+<meta property="og:title" content="PRIVACY — Privacy Is Normal" />
 <meta property="og:description" content="A shielded memecoin for people who think privacy is normal. 𝕏 @secretcoinzec" />
 <meta property="og:type" content="website" />
-<meta name="theme-color" content="#0d0717" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f4820a'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Georgia,serif' font-weight='bold' text-anchor='middle' fill='%231a0f2e'%3Ez%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#050208" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f4820a'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Georgia,serif' font-weight='bold' text-anchor='middle' fill='%23050208'%3Ez%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --void:#0d0717; --card:#1a0f2c; --line:rgba(168,120,255,.22);
+  --void:#050208; --ink:#0b0513; --card:#0e0718; --line:rgba(150,100,240,.16);
   --violet:#a855f7; --violet-soft:#c99bff;
   --ember:#f4820a; --ember-soft:#ffb454;
-  --text:#efe6ff; --muted:#a894c4; --max:1120px;
+  --text:#e8dcff; --muted:#8b7aa8; --max:980px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--void);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
 
-/* ---------- animated backdrop layers ---------- */
-#rain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5}
+/* ---------- backdrop ---------- */
+#fx{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
 .aura{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(48vw 48vw at 12% -8%, rgba(168,85,247,.30), transparent 62%),
-    radial-gradient(42vw 42vw at 96% 6%, rgba(244,130,10,.20), transparent 62%),
-    radial-gradient(60vw 44vw at 50% 112%, rgba(168,85,247,.18), transparent 66%);
-  animation:drift 22s ease-in-out infinite alternate}
-@keyframes drift{to{transform:translate3d(0,-28px,0) scale(1.06);filter:hue-rotate(18deg)}}
-.grid-bg{position:fixed;inset:-50%;z-index:0;pointer-events:none;opacity:.30;
-  background-image:linear-gradient(rgba(168,120,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(168,120,255,.08) 1px,transparent 1px);
-  background-size:62px 62px;animation:pan 26s linear infinite;
-  mask-image:radial-gradient(44% 40% at 50% 46%,#000,transparent 78%)}
-@keyframes pan{to{transform:translate3d(62px,62px,0)}}
-#glow{position:fixed;width:520px;height:520px;left:0;top:0;margin:-260px 0 0 -260px;z-index:0;pointer-events:none;
-  background:radial-gradient(circle,rgba(244,130,10,.16),transparent 62%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.scan{position:fixed;inset:0;z-index:30;pointer-events:none;
-  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.028) 0 1px,transparent 1px 3px)}
+    radial-gradient(44vw 44vw at 8% -10%, rgba(140,60,230,.20), transparent 64%),
+    radial-gradient(38vw 38vw at 98% 4%, rgba(244,130,10,.13), transparent 64%),
+    radial-gradient(56vw 40vw at 50% 114%, rgba(140,60,230,.13), transparent 68%);
+  animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(0,-30px,0) scale(1.07);filter:hue-rotate(16deg)}}
+.grid-bg{position:fixed;inset:-50%;z-index:0;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(rgba(150,100,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(150,100,240,.07) 1px,transparent 1px);
+  background-size:70px 70px;animation:pan 30s linear infinite;
+  mask-image:radial-gradient(40% 36% at 50% 46%,#000,transparent 76%)}
+@keyframes pan{to{transform:translate3d(70px,70px,0)}}
+#glow{position:fixed;width:560px;height:560px;left:0;top:0;margin:-280px 0 0 -280px;z-index:0;pointer-events:none;
+  background:radial-gradient(circle,rgba(244,130,10,.13),transparent 62%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.scan{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.7;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.022) 0 1px,transparent 1px 3px)}
+.vig{position:fixed;inset:0;z-index:29;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 40%,transparent 45%,rgba(0,0,0,.72) 100%)}
 main,header,footer{position:relative;z-index:2}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
 
 /* ---------- nav ---------- */
-header{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
-  background:linear-gradient(to bottom,rgba(13,7,23,.94),rgba(13,7,23,.5));border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:16px;height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--text)}
-.mark{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;color:#1a0f2e;
-  background:linear-gradient(135deg,var(--ember-soft),var(--ember));box-shadow:0 0 22px rgba(244,130,10,.5);animation:breathe 3.4s ease-in-out infinite}
-@keyframes breathe{50%{box-shadow:0 0 34px rgba(244,130,10,.85);transform:scale(1.06)}}
-.nav nav{margin-left:auto;display:flex;gap:26px}
-.nav nav a{color:var(--muted);text-decoration:none;font-size:.94rem;position:relative}
-.nav nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--violet),var(--ember));transition:width .28s}
+header{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px);
+  background:linear-gradient(to bottom,rgba(5,2,8,.95),rgba(5,2,8,.45));border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--text);letter-spacing:.02em}
+.mark{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;color:#050208;
+  background:linear-gradient(135deg,var(--ember-soft),var(--ember));box-shadow:0 0 20px rgba(244,130,10,.5);animation:breathe 3.4s ease-in-out infinite}
+@keyframes breathe{50%{box-shadow:0 0 36px rgba(244,130,10,.9);transform:scale(1.08) rotate(-6deg)}}
+.nav nav{margin-left:auto;display:flex;gap:24px}
+.nav nav a{color:var(--muted);text-decoration:none;font-size:.92rem;position:relative;font-family:'JetBrains Mono',monospace}
+.nav nav a::after{content:"";position:absolute;left:0;bottom:-5px;height:1px;width:0;background:linear-gradient(90deg,var(--violet),var(--ember));transition:width .3s}
 .nav nav a:hover{color:var(--violet-soft)}
 .nav nav a:hover::after{width:100%}
-@media(max-width:820px){.nav nav{display:none}}
-#bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--violet),var(--ember))}
+@media(max-width:760px){.nav nav{display:none}}
+#bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--violet),var(--ember));box-shadow:0 0 12px rgba(244,130,10,.7)}
 
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:700;text-decoration:none;
-  font-size:.97rem;border:1px solid transparent;transition:.2s ease;white-space:nowrap;position:relative;overflow:hidden}
-.btn-primary{background:linear-gradient(135deg,var(--ember),#ff9d2e);color:#180d29;box-shadow:0 10px 34px -10px rgba(244,130,10,.8)}
+/* ---------- buttons (magnetic) ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;
+  font-size:.95rem;border:1px solid transparent;white-space:nowrap;position:relative;overflow:hidden;
+  transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,border-color .25s}
+.btn-primary{background:linear-gradient(135deg,var(--ember),#ff9d2e);color:#0b0513;box-shadow:0 8px 30px -10px rgba(244,130,10,.85)}
 .btn-primary::after{content:"";position:absolute;inset:0;transform:translateX(-120%);
-  background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);animation:sheen 3.6s ease-in-out infinite}
-@keyframes sheen{40%,100%{transform:translateX(130%)}}
-.btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 44px -12px rgba(244,130,10,1)}
-.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(168,85,247,.09)}
-.btn-ghost:hover{border-color:var(--violet);background:rgba(168,85,247,.2);transform:translateY(-3px)}
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);animation:sheen 3.4s ease-in-out infinite}
+@keyframes sheen{42%,100%{transform:translateX(130%)}}
+.btn-primary:hover{box-shadow:0 18px 46px -12px rgba(244,130,10,1)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(140,60,230,.08)}
+.btn-ghost:hover{border-color:var(--violet);background:rgba(140,60,230,.18)}
 
 /* ---------- hero ---------- */
-.hero{padding:92px 0 84px;text-align:center}
-.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border-radius:999px;border:1px solid var(--line);
-  background:rgba(168,85,247,.1);color:var(--violet-soft);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember);animation:pulse 1.8s infinite}
-@keyframes pulse{50%{opacity:.25;transform:scale(.7)}}
-h1{font-size:clamp(2.9rem,9vw,6rem);line-height:.97;margin:26px 0 0;letter-spacing:-.035em;font-weight:700}
+.hero{padding:96px 0 76px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:6px 16px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(140,60,230,.09);color:var(--violet-soft);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember);animation:pulse 1.7s infinite}
+@keyframes pulse{50%{opacity:.2;transform:scale(.6)}}
+
+/* orbiting z sigil */
+.sigil{width:120px;height:120px;margin:34px auto 0;position:relative;display:grid;place-items:center}
+.sigil .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(150,100,240,.28);animation:spin 14s linear infinite}
+.sigil .ring:nth-child(2){inset:14px;border-color:rgba(244,130,10,.26);animation-duration:9s;animation-direction:reverse}
+.sigil .ring::before{content:"";position:absolute;top:-3px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;
+  background:var(--violet);box-shadow:0 0 12px var(--violet)}
+.sigil .ring:nth-child(2)::before{background:var(--ember);box-shadow:0 0 12px var(--ember)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sigil .z{font-family:Georgia,serif;font-size:3.1rem;font-weight:700;line-height:1;
+  background:linear-gradient(140deg,var(--violet-soft),var(--ember-soft));-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px)}}
+
+h1{font-size:clamp(2.7rem,9.5vw,5.6rem);line-height:.96;margin:26px 0 0;letter-spacing:-.04em;font-weight:700}
 .grad{background:linear-gradient(110deg,var(--violet-soft),var(--ember-soft),var(--violet-soft));background-size:220% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;animation:slide 7s linear infinite}
 @keyframes slide{to{background-position:220% 0}}
 .glitch{position:relative;display:inline-block}
 .glitch::before,.glitch::after{content:attr(data-t);position:absolute;inset:0;background:var(--void);clip-path:inset(0 0 100% 0)}
-.glitch::before{color:var(--ember);animation:g1 4.2s infinite steps(2)}
-.glitch::after{color:var(--violet);animation:g2 3.3s infinite steps(2)}
-@keyframes g1{0%,92%{clip-path:inset(0 0 100% 0);transform:none}93%{clip-path:inset(12% 0 62% 0);transform:translate(-4px,1px)}96%{clip-path:inset(48% 0 28% 0);transform:translate(4px,-1px)}99%{clip-path:inset(0 0 100% 0)}}
-@keyframes g2{0%,94%{clip-path:inset(0 0 100% 0);transform:none}95%{clip-path:inset(62% 0 14% 0);transform:translate(4px,-2px)}98%{clip-path:inset(22% 0 55% 0);transform:translate(-3px,2px)}99.5%{clip-path:inset(0 0 100% 0)}}
-.lede{max-width:650px;margin:22px auto 0;color:var(--muted);font-size:1.12rem}
-.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-.cipher{font-family:'JetBrains Mono',monospace;color:rgba(168,120,255,.55);font-size:.78rem;letter-spacing:.22em;margin-top:30px;min-height:1.2em}
+.glitch::before{color:var(--ember);animation:g1 4s infinite steps(2)}
+.glitch::after{color:var(--violet);animation:g2 3.1s infinite steps(2)}
+@keyframes g1{0%,91%{clip-path:inset(0 0 100% 0);transform:none}92%{clip-path:inset(12% 0 62% 0);transform:translate(-5px,1px)}96%{clip-path:inset(48% 0 28% 0);transform:translate(5px,-1px)}99%{clip-path:inset(0 0 100% 0)}}
+@keyframes g2{0%,93%{clip-path:inset(0 0 100% 0);transform:none}94%{clip-path:inset(62% 0 14% 0);transform:translate(5px,-2px)}98%{clip-path:inset(22% 0 55% 0);transform:translate(-4px,2px)}99.5%{clip-path:inset(0 0 100% 0)}}
+.lede{max-width:520px;margin:20px auto 0;color:var(--muted);font-size:1.06rem}
+.cta{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.cipher{font-family:'JetBrains Mono',monospace;color:rgba(150,100,240,.5);font-size:.74rem;letter-spacing:.22em;margin-top:28px;min-height:1.2em}
 
 /* marquee */
-.marq{margin-top:46px;border-block:1px solid var(--line);background:rgba(26,15,44,.55);overflow:hidden;
-  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.marq-in{display:flex;gap:44px;padding:13px 0;width:max-content;animation:roll 26s linear infinite;
-  font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
+.marq{margin-top:42px;border-block:1px solid var(--line);background:rgba(11,5,19,.6);overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.marq-in{display:flex;gap:40px;padding:12px 0;width:max-content;animation:roll 28s linear infinite;
+  font-family:'JetBrains Mono',monospace;font-size:.76rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
 .marq-in b{color:var(--ember-soft)}
 @keyframes roll{to{transform:translateX(-50%)}}
 .marq:hover .marq-in{animation-play-state:paused}
 
-/* stat chips */
-.ticker-row{margin-top:46px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.chip{border:1px solid var(--line);border-radius:14px;padding:14px 22px;background:rgba(26,15,44,.6);min-width:152px;transition:.25s}
-.chip:hover{transform:translateY(-5px) rotate(-1deg);border-color:rgba(244,130,10,.55)}
-.chip b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.25rem;color:var(--ember-soft)}
-.chip span{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* counters */
+.ticker-row{margin-top:42px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.chip{border:1px solid var(--line);border-radius:14px;padding:14px 20px;background:rgba(14,7,24,.7);min-width:140px;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.chip:hover{transform:translateY(-6px) rotate(-1.5deg);border-color:rgba(244,130,10,.5)}
+.chip b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.2rem;color:var(--ember-soft)}
+.chip span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
-/* ---------- sections + reveal ---------- */
-section{padding:86px 0}
-.eyebrow{color:var(--ember);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin:0 0 12px}
-h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin:0 0 14px;letter-spacing:-.025em;line-height:1.1}
-.sub{color:var(--muted);max-width:640px;margin:0 0 42px}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+/* ---------- sections ---------- */
+section{padding:78px 0}
+.eyebrow{color:var(--ember);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin:0 0 12px;
+  font-family:'JetBrains Mono',monospace}
+h2{font-size:clamp(1.8rem,4.4vw,2.6rem);margin:0 0 12px;letter-spacing:-.03em;line-height:1.08}
+.sub{color:var(--muted);max-width:520px;margin:0 0 38px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
+.stag>*{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.stag.in>*{opacity:1;transform:none}
+.stag.in>*:nth-child(2){transition-delay:.11s}
+.stag.in>*:nth-child(3){transition-delay:.22s}
+.stag.in>*:nth-child(4){transition-delay:.33s}
 
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(274px,1fr))}
-.card{border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:.25s ease;
-  background:linear-gradient(160deg,rgba(28,16,48,.92),rgba(18,10,32,.7))}
-.card::before{content:"";position:absolute;inset:-1px;border-radius:20px;opacity:0;transition:opacity .3s;
-  background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(244,130,10,.20),transparent 65%)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(14,7,24,.95),rgba(7,3,12,.8));
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .3s;transform-style:preserve-3d}
+.card::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;
+  background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(244,130,10,.16),transparent 65%)}
 .card:hover::before{opacity:1}
-.card:hover{transform:translateY(-6px);border-color:rgba(244,130,10,.45)}
-.card h3{margin:16px 0 8px;font-size:1.18rem;position:relative}
-.card p{margin:0;color:var(--muted);font-size:.97rem;position:relative}
-.ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.35rem;position:relative;
-  background:linear-gradient(135deg,rgba(168,85,247,.3),rgba(244,130,10,.24));border:1px solid var(--line);transition:transform .3s}
-.card:hover .ico{transform:rotate(-8deg) scale(1.1)}
+.card:hover{border-color:rgba(244,130,10,.4)}
+.card h3{margin:14px 0 7px;font-size:1.1rem;position:relative}
+.card p{margin:0;color:var(--muted);font-size:.94rem;position:relative}
+.ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;position:relative;
+  background:linear-gradient(135deg,rgba(140,60,230,.26),rgba(244,130,10,.2));border:1px solid var(--line);transition:transform .35s}
+.card:hover .ico{transform:rotate(-10deg) scale(1.14)}
 
-/* redacted */
-.rd{background:linear-gradient(90deg,var(--violet),var(--ember));color:transparent;border-radius:4px;padding:0 6px;
-  cursor:help;transition:.3s;user-select:none}
+.rd{background:linear-gradient(90deg,var(--violet),var(--ember));color:transparent;border-radius:3px;padding:0 6px;cursor:help;
+  transition:.35s;user-select:none}
 .rd:hover{background:none;color:var(--ember-soft)}
 
-/* shielded compare */
-.shield{border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;gap:30px;grid-template-columns:1fr 1fr;
-  background:linear-gradient(140deg,rgba(168,85,247,.16),rgba(244,130,10,.08))}
-@media(max-width:820px){.shield{grid-template-columns:1fr;padding:26px}}
-.compare h4{margin:0 0 14px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.compare li{display:flex;gap:11px;align-items:flex-start;font-size:.97rem;transition:transform .25s}
-.compare li:hover{transform:translateX(6px)}
+/* shielded */
+.shield{border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;gap:26px;grid-template-columns:1fr 1fr;
+  background:linear-gradient(140deg,rgba(140,60,230,.13),rgba(244,130,10,.06))}
+@media(max-width:760px){.shield{grid-template-columns:1fr;padding:24px}}
+.compare h4{margin:0 0 13px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.compare li{display:flex;gap:10px;font-size:.94rem;transition:transform .25s}
+.compare li:hover{transform:translateX(7px)}
 .tick{color:var(--ember);font-weight:700}
-.cross{color:#7a6b91;font-weight:700}
+.cross{color:#5f5375;font-weight:700}
 .dim{color:var(--muted)}
 
 /* tokenomics */
-.tk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(202px,1fr))}
-.tk div{border:1px solid var(--line);border-radius:18px;padding:24px;background:rgba(26,15,44,.65);transition:.25s}
-.tk div:hover{transform:translateY(-6px);border-color:rgba(244,130,10,.5)}
-.tk b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.7rem;
+.tk{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.tk div{border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(14,7,24,.7);
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.tk div:hover{transform:translateY(-7px);border-color:rgba(244,130,10,.45)}
+.tk b{display:block;font-family:'JetBrains Mono',monospace;font-size:1.55rem;
   background:linear-gradient(120deg,var(--violet-soft),var(--ember-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tk span{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.ca{margin-top:26px;border:1px dashed rgba(244,130,10,.5);border-radius:16px;padding:18px 20px;background:rgba(244,130,10,.07);
-  display:flex;gap:14px;align-items:center;flex-wrap:wrap;animation:hum 3s ease-in-out infinite}
-@keyframes hum{50%{border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.09)}}
-.ca code{font-family:'JetBrains Mono',monospace;color:var(--ember-soft);word-break:break-all;flex:1;min-width:210px}
-.copy{border:1px solid var(--line);background:rgba(168,85,247,.16);color:var(--text);border-radius:10px;padding:8px 16px;
-  cursor:pointer;font-family:inherit;font-size:.86rem;font-weight:700;transition:.2s}
+.tk span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ca{margin-top:22px;border:1px dashed rgba(244,130,10,.45);border-radius:14px;padding:16px 18px;background:rgba(244,130,10,.05);
+  display:flex;gap:13px;align-items:center;flex-wrap:wrap;animation:hum 3.2s ease-in-out infinite}
+@keyframes hum{50%{border-color:rgba(140,60,230,.6);background:rgba(140,60,230,.07)}}
+.ca code{font-family:'JetBrains Mono',monospace;color:var(--ember-soft);word-break:break-all;flex:1;min-width:200px;font-size:.86rem}
+.copy{border:1px solid var(--line);background:rgba(140,60,230,.14);color:var(--text);border-radius:9px;padding:8px 15px;
+  cursor:pointer;font-family:inherit;font-size:.82rem;font-weight:700;transition:.2s}
 .copy:hover{border-color:var(--violet);transform:translateY(-2px)}
 
 /* roadmap */
-.road{position:relative;padding-left:26px}
-.road::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--violet),var(--ember))}
-.step{position:relative;padding:0 0 30px 18px;transition:transform .25s}
-.step:hover{transform:translateX(8px)}
-.step::before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--ember);
-  box-shadow:0 0 0 4px rgba(244,130,10,.18);animation:ping 2.6s ease-out infinite}
-.step:nth-child(2)::before{animation-delay:.6s}
-.step:nth-child(3)::before{animation-delay:1.2s}
-.step:nth-child(4)::before{animation-delay:1.8s}
-@keyframes ping{50%{box-shadow:0 0 0 12px rgba(244,130,10,0)}}
-.step h3{margin:0 0 4px;font-size:1.08rem}
-.step p{margin:0;color:var(--muted);font-size:.96rem}
-.step small{color:var(--violet-soft);font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.1em}
+.road{position:relative;padding-left:24px}
+.road::before{content:"";position:absolute;left:4px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--violet),var(--ember))}
+.step{position:relative;padding:0 0 26px 18px;transition:transform .25s}
+.step:hover{transform:translateX(9px)}
+.step::before{content:"";position:absolute;left:-24px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--ember);
+  box-shadow:0 0 0 4px rgba(244,130,10,.14);animation:ping 2.8s ease-out infinite}
+.step:nth-child(2)::before{animation-delay:.7s}
+.step:nth-child(3)::before{animation-delay:1.4s}
+.step:nth-child(4)::before{animation-delay:2.1s}
+@keyframes ping{50%{box-shadow:0 0 0 13px rgba(244,130,10,0)}}
+.step h3{margin:0 0 3px;font-size:1.02rem}
+.step p{margin:0;color:var(--muted);font-size:.93rem}
+.step small{color:var(--violet-soft);font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.14em}
 
 /* x cta */
-.xbox{text-align:center;border:1px solid var(--line);border-radius:26px;padding:58px 28px;position:relative;overflow:hidden;
-  background:linear-gradient(150deg,rgba(168,85,247,.18),rgba(244,130,10,.12))}
-.xbox::after{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent,rgba(244,130,10,.16),transparent 40%);
-  animation:spin 12s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+.xbox{text-align:center;border:1px solid var(--line);border-radius:24px;padding:54px 26px;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,rgba(140,60,230,.14),rgba(244,130,10,.08))}
+.xbox::after{content:"";position:absolute;inset:-60%;background:conic-gradient(from 0deg,transparent,rgba(244,130,10,.14),transparent 38%);
+  animation:spin 13s linear infinite}
 .xbox>*{position:relative;z-index:1}
-.handle{font-family:'JetBrains Mono',monospace;color:var(--ember-soft);font-size:1.05rem;margin:0 0 26px}
+.handle{font-family:'JetBrains Mono',monospace;color:var(--ember-soft);font-size:1rem;margin:0 0 24px}
 
 /* faq */
-details{border:1px solid var(--line);border-radius:16px;padding:18px 22px;background:rgba(26,15,44,.6);margin-bottom:12px;transition:.25s}
-details[open]{border-color:rgba(244,130,10,.45)}
-summary{cursor:pointer;font-weight:700;list-style:none}
+details{border:1px solid var(--line);border-radius:14px;padding:16px 20px;background:rgba(14,7,24,.7);margin-bottom:10px;transition:.25s}
+details[open]{border-color:rgba(244,130,10,.4)}
+summary{cursor:pointer;font-weight:700;list-style:none;font-size:.98rem}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";float:right;color:var(--ember);font-weight:700;transition:transform .3s}
+summary::after{content:"+";float:right;color:var(--ember);font-weight:700}
 details[open] summary::after{content:"–"}
-details p{color:var(--muted);margin:12px 0 0;font-size:.97rem;animation:fade .4s ease}
-@keyframes fade{from{opacity:0;transform:translateY(-6px)}}
+details p{color:var(--muted);margin:10px 0 0;font-size:.93rem;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-7px)}}
 
-footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.88rem}
-.foot{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.85rem}
+.foot{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
 .foot a{color:var(--violet-soft);text-decoration:none}
-.disc{margin-top:16px;font-size:.8rem;color:#7d6c96;max-width:740px}
+.disc{margin-top:14px;font-size:.76rem;color:#6a5c82;max-width:700px}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .rv{opacity:1;transform:none}
-  #rain{display:none}
+  .rv,.stag>*{opacity:1;transform:none}
+  #fx{display:none}
 }
 </style>
 </head>
 <body>
 
-<canvas id="rain"></canvas>
+<canvas id="fx"></canvas>
 <div class="aura"></div>
 <div class="grid-bg"></div>
 <div id="glow"></div>
+<div class="vig"></div>
 <div class="scan"></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top"><span class="mark">z</span> SECRET</a>
-    <nav>
-      <a href="#why">Why</a><a href="#shielded">Shielded</a><a href="#tokenomics">Tokenomics</a><a href="#roadmap">Roadmap</a><a href="#faq">FAQ</a>
-    </nav>
-    <a class="btn btn-primary" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">Follow on 𝕏</a>
+    <a class="brand" href="#top"><span class="mark">z</span> PRIVACY</a>
+    <nav><a href="#why">Why</a><a href="#pools">Pools</a><a href="#token">Token</a><a href="#roadmap">Roadmap</a></nav>
+    <a class="btn btn-primary mag" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">𝕏 Follow</a>
   </div>
   <div id="bar"></div>
 </header>
@@ -229,111 +253,99 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 <main id="top">
 
 <section class="hero wrap">
-  <span class="pill"><span class="dot"></span> Shielded by default</span>
+  <span class="pill"><span class="dot"></span> $PRIVACY · shielded by default</span>
+  <div class="sigil"><span class="ring"></span><span class="ring"></span><span class="z">z</span></div>
   <h1><span class="scramble" data-final="Privacy is">Privacy is</span><br><span class="grad glitch" data-t="normal.">normal.</span></h1>
-  <p class="lede">$SECRET is the memecoin for people who close the curtains at night and don't feel weird about it. Purple pills, orange flames, and a firm belief that your balance is nobody's business.</p>
+  <p class="lede">A memecoin for people who close the curtains and don't feel weird about it.</p>
   <div class="cta">
-    <a class="btn btn-primary" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">𝕏 @secretcoinzec</a>
-    <a class="btn btn-ghost" href="#shielded">Enter the shielded pool →</a>
+    <a class="btn btn-primary mag" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">𝕏 @secretcoinzec</a>
+    <a class="btn btn-ghost mag" href="#pools">Enter the pool →</a>
   </div>
   <p class="cipher" id="cipher"></p>
   <div class="marq"><div class="marq-in" id="marq"></div></div>
-  <div class="ticker-row">
-    <div class="chip"><b>$SECRET</b><span>Ticker</span></div>
-    <div class="chip"><b>0%</b><span>Surveillance</span></div>
-    <div class="chip"><b>100%</b><span>Community</span></div>
+  <div class="ticker-row stag">
+    <div class="chip"><b>$PRIVACY</b><span>Ticker</span></div>
+    <div class="chip"><b data-count="0" data-suffix="%">0%</b><span>Surveillance</span></div>
+    <div class="chip"><b data-count="100" data-suffix="%">100%</b><span>Community</span></div>
     <div class="chip"><b>∞</b><span>Vibes</span></div>
   </div>
 </section>
 
 <section id="why" class="wrap rv">
-  <p class="eyebrow">The thesis</p>
-  <h2>Transparent ledgers were a bug, not a feature.</h2>
-  <p class="sub">Every transaction you've ever made on a glass chain is sitting in a block explorer with your name slowly being attached to it. We think that's insane. So we made a coin about it.</p>
-  <div class="grid">
-    <div class="card"><div class="ico">🛡️</div><h3>Shielded mindset</h3><p>Prove something is true without revealing the thing itself. It's cryptography, not cope.</p></div>
-    <div class="card"><div class="ico">🔥</div><h3>Orange flame, purple shade</h3><p>The heat of a movement, the cool of a shielded pool. Our palette is the entire brand strategy and we're at peace with that.</p></div>
-    <div class="card"><div class="ico">🕳️</div><h3>No doxx, no drama</h3><p>Nobody needs to see your bags to enjoy the memes. The timeline is public. Your wallet doesn't have to be.</p></div>
-    <div class="card"><div class="ico">🤝</div><h3>Community owned</h3><p>No venture overlords, no unlock cliffs looming overhead. Just holders who refuse to be a row in someone's dashboard.</p></div>
-    <div class="card"><div class="ico">🧿</div><h3>Anti-surveillance humor</h3><p>We fight the panopticon with jpegs. Historically undefeated. Do not question the <span class="rd">classified</span> methodology.</p></div>
-    <div class="card"><div class="ico">⚡</div><h3>Zero-knowledge energy</h3><p>You'll know we're up. You won't know by how much. That's the whole point, anon.</p></div>
+  <p class="eyebrow">Thesis</p>
+  <h2>Transparent ledgers were a bug.</h2>
+  <p class="sub">Your whole financial history, sitting in a block explorer, waiting for your name to get attached. We made a coin about it.</p>
+  <div class="grid stag">
+    <div class="card"><div class="ico">🛡️</div><h3>Shielded mindset</h3><p>Prove something is true without revealing the thing itself. Cryptography, not cope.</p></div>
+    <div class="card"><div class="ico">🔥</div><h3>Flame and shade</h3><p>Orange for the movement, purple for the pool. That's the entire brand strategy.</p></div>
+    <div class="card"><div class="ico">🕳️</div><h3>No doxx, no drama</h3><p>The timeline is public. Your wallet doesn't have to be. Methodology: <span class="rd">classified</span>.</p></div>
   </div>
 </section>
 
-<section id="shielded" class="wrap rv">
-  <p class="eyebrow">Transparent vs shielded</p>
-  <h2>Pick a pool.</h2>
-  <p class="sub">One of these is a public diary. The other is a sealed envelope.</p>
+<section id="pools" class="wrap rv">
+  <p class="eyebrow">Pick a pool</p>
+  <h2>Diary, or sealed envelope.</h2>
   <div class="shield">
     <div class="compare">
-      <h4>Transparent pool 🫣</h4>
+      <h4>Transparent 🫣</h4>
       <ul>
-        <li><span class="cross">✕</span><span class="dim">Your entire financial history, permanently indexed</span></li>
+        <li><span class="cross">✕</span><span class="dim">Permanently indexed forever</span></li>
         <li><span class="cross">✕</span><span class="dim">Strangers quote-tweeting your PnL</span></li>
-        <li><span class="cross">✕</span><span class="dim">Chain-analysis firms profiling you for free</span></li>
-        <li><span class="cross">✕</span><span class="dim">Judged for one (1) bad trade in 2021</span></li>
+        <li><span class="cross">✕</span><span class="dim">Profiled for free</span></li>
       </ul>
     </div>
     <div class="compare">
-      <h4>Shielded pool 🛡️</h4>
+      <h4>Shielded 🛡️</h4>
       <ul>
-        <li><span class="tick">✓</span><span>Your business stays your business</span></li>
-        <li><span class="tick">✓</span><span>Mystique. Untraceable levels of aura</span></li>
-        <li><span class="tick">✓</span><span>Nobody front-runs what nobody can see</span></li>
-        <li><span class="tick">✓</span><span>Sleeping soundly, curtains fully closed</span></li>
+        <li><span class="tick">✓</span><span>Your business, yours</span></li>
+        <li><span class="tick">✓</span><span>Untraceable levels of aura</span></li>
+        <li><span class="tick">✓</span><span>Nobody front-runs the invisible</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section id="tokenomics" class="wrap rv">
-  <p class="eyebrow">Tokenomics</p>
-  <h2>Simple enough to fit on a sticker.</h2>
-  <p class="sub">No twelve-tab spreadsheet. No emissions schedule written in runes.</p>
-  <div class="tk">
-    <div><b>0/0</b><span>Buy / sell tax</span></div>
-    <div><b>100%</b><span>Fair launch supply</span></div>
+<section id="token" class="wrap rv">
+  <p class="eyebrow">Token</p>
+  <h2>Fits on a sticker.</h2>
+  <div class="tk stag">
+    <div><b>0/0</b><span>Tax</span></div>
+    <div><b>100%</b><span>Fair launch</span></div>
     <div><b>LOCKED</b><span>Liquidity</span></div>
-    <div><b>RENOUNCED</b><span>Contract intent</span></div>
+    <div><b>RENOUNCED</b><span>Contract</span></div>
   </div>
   <div class="ca">
     <code id="caText">CA: announced only on 𝕏 — @secretcoinzec</code>
     <button class="copy" id="copyBtn" type="button">Copy</button>
   </div>
-  <p class="disc">Always verify the contract address against the official 𝕏 account before interacting with anything. Impersonators are the oldest trick in the book.</p>
+  <p class="disc">Verify the address against the official 𝕏 account before touching anything. Impersonators are the oldest trick in the book.</p>
 </section>
 
 <section id="roadmap" class="wrap rv">
   <p class="eyebrow">Roadmap</p>
   <h2>Four phases. Mostly memes.</h2>
-  <p class="sub">We'd give exact dates, but that would be disclosing information.</p>
+  <p class="sub">We'd give dates, but that would be disclosing information.</p>
   <div class="road">
-    <div class="step"><small>PHASE 01</small><h3>Emerge from the shadows</h3><p>Launch, website, and the first wave of purple-and-orange propaganda. Early holders find each other.</p></div>
-    <div class="step"><small>PHASE 02</small><h3>Build the shielded pool</h3><p>Community grows, memes compound, the 𝕏 account becomes a privacy-maxi shrine. Raids, art contests, chaos.</p></div>
-    <div class="step"><small>PHASE 03</small><h3>Go dark (loudly)</h3><p>Collabs with privacy-native communities, creator bounties, and merch you can wear to avoid eye contact at conferences.</p></div>
-    <div class="step"><small>PHASE 04</small><h3>Privacy becomes normal</h3><p>The endgame: nobody thinks twice about shielding a transaction. We just wanted to make it funny first.</p></div>
+    <div class="step"><small>01</small><h3>Emerge</h3><p>Launch, site, first wave of purple-and-orange propaganda.</p></div>
+    <div class="step"><small>02</small><h3>Fill the pool</h3><p>Memes compound. The 𝕏 account becomes a privacy-maxi shrine.</p></div>
+    <div class="step"><small>03</small><h3>Go dark, loudly</h3><p>Collabs, creator bounties, merch for avoiding eye contact at conferences.</p></div>
+    <div class="step"><small>04</small><h3>Privacy is normal</h3><p>Nobody thinks twice about shielding. We just made it funny first.</p></div>
   </div>
 </section>
 
 <section class="wrap rv">
   <div class="xbox">
     <p class="eyebrow">Headquarters</p>
-    <h2>Everything happens on 𝕏.</h2>
+    <h2>It all happens on 𝕏.</h2>
     <p class="handle">@secretcoinzec</p>
-    <a class="btn btn-primary" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">𝕏 Follow @secretcoinzec</a>
+    <a class="btn btn-primary mag" href="https://x.com/secretcoinzec" target="_blank" rel="noopener">𝕏 Follow @secretcoinzec</a>
   </div>
 </section>
 
-<section id="faq" class="wrap rv">
-  <p class="eyebrow">FAQ</p>
-  <h2>Questions we'll actually answer.</h2>
-  <div style="margin-top:32px">
-    <details open><summary>Is this affiliated with Zcash?</summary><p>No. $SECRET is an independent, community-made memecoin that borrows its aesthetic and attitude from the privacy movement. We're fans, not spokespeople.</p></details>
-    <details><summary>Why purple and orange?</summary><p>Purple for the shielded pool, orange for the flame. Together they look like a sunset over a place with no surveillance cameras.</p></details>
-    <details><summary>Where do I get the contract address?</summary><p>Only from @secretcoinzec on 𝕏. Anything posted elsewhere — DMs especially — is a scam until proven otherwise.</p></details>
-    <details><summary>Is this an investment?</summary><p>No. It's a memecoin. No intrinsic value, no yield, no promise of returns. Treat it like buying a sticker, not a security.</p></details>
-    <details><summary>How do I help?</summary><p>Make memes. Post them. Be kind to newcomers. Tell one person that wanting privacy doesn't make them suspicious.</p></details>
-  </div>
+<section class="wrap rv" style="padding-top:0">
+  <details open><summary>Affiliated with Zcash?</summary><p>No. $PRIVACY is an independent, community-made memecoin that borrows its attitude from the privacy movement. Fans, not spokespeople.</p></details>
+  <details><summary>Where's the contract address?</summary><p>Only from @secretcoinzec on 𝕏. Anywhere else — DMs especially — it's a scam until proven otherwise.</p></details>
+  <details><summary>Is this an investment?</summary><p>No. No intrinsic value, no yield, no promise of returns. It's a sticker, not a security.</p></details>
 </section>
 
 </main>
@@ -341,30 +353,51 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 <footer>
   <div class="wrap">
     <div class="foot">
-      <span class="brand"><span class="mark">z</span> SECRET</span>
+      <span class="brand"><span class="mark">z</span> PRIVACY</span>
       <span>𝕏 <a href="https://x.com/secretcoinzec" target="_blank" rel="noopener">@secretcoinzec</a></span>
     </div>
-    <p class="disc">$SECRET is a meme token made for entertainment and community. It is not affiliated with, endorsed by, or connected to the Zcash project or the Electric Coin Company. Nothing here is financial advice or an offer to sell securities. Crypto assets are volatile and you can lose everything you put in — only risk what you can afford to lose, and do your own research.</p>
+    <p class="disc">$PRIVACY is a meme token made for entertainment and community. Not affiliated with, endorsed by, or connected to the Zcash project or the Electric Coin Company. Nothing here is financial advice or an offer to sell securities. Crypto is volatile and you can lose everything — only risk what you can afford to lose.</p>
   </div>
 </footer>
 
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* scroll progress bar */
+  /* scroll progress */
   var bar = document.getElementById('bar');
-  function prog(){
+  addEventListener('scroll', function(){
     var h = document.documentElement.scrollHeight - innerHeight;
-    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
-  }
-  addEventListener('scroll', prog, {passive:true}); prog();
+    bar.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+  }, {passive:true});
 
-  /* reveal on scroll */
+  /* reveal + stagger + counters */
   var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      e.target.querySelectorAll('[data-count]').forEach(count);
+      io.unobserve(e.target);
+    });
+  }, {threshold:.14});
+  document.querySelectorAll('.rv,.stag').forEach(function(el){ io.observe(el); });
+
+  function count(el){
+    if (reduce) return;
+    var to = +el.dataset.count, sfx = el.dataset.suffix || '', t0 = performance.now();
+    (function tick(now){
+      var p = Math.min((now - t0) / 1100, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))) + sfx;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  /* marquee */
+  var items = ['shielded by default','𝕏 @secretcoinzec','zero knowledge','privacy is normal','no surveillance','curtains closed','$PRIVACY'];
+  var line = items.map(function(t,i){ return (i%3===0 ? '<b>'+t+'</b>' : '<span>'+t+'</span>') + '<span>◆</span>'; }).join('');
+  document.getElementById('marq').innerHTML = line + line;
+
+  if (reduce) return;
 
   /* cursor glow */
   var glow = document.getElementById('glow');
@@ -372,41 +405,61 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
     glow.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
   }, {passive:true});
 
-  /* card spotlight */
+  /* card spotlight + 3D tilt */
   document.querySelectorAll('.card').forEach(function(c){
     c.addEventListener('pointermove', function(e){
-      var r = c.getBoundingClientRect();
-      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      var r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      c.style.setProperty('--mx', x + 'px');
+      c.style.setProperty('--my', y + 'px');
+      c.style.transform = 'perspective(800px) rotateX(' + ((.5 - y / r.height) * 7).toFixed(2) +
+                          'deg) rotateY(' + ((x / r.width - .5) * 7).toFixed(2) + 'deg) translateY(-5px)';
+    });
+    c.addEventListener('pointerleave', function(){ c.style.transform = ''; });
+  });
+
+  /* magnetic buttons */
+  document.querySelectorAll('.mag').forEach(function(b){
+    b.addEventListener('pointermove', function(e){
+      var r = b.getBoundingClientRect();
+      b.style.transform = 'translate(' + ((e.clientX - r.left - r.width/2) * .22).toFixed(1) + 'px,' +
+                                         ((e.clientY - r.top - r.height/2) * .35).toFixed(1) + 'px) scale(1.04)';
+    });
+    b.addEventListener('pointerleave', function(){ b.style.transform = ''; });
+  });
+
+  /* nav link hover scramble */
+  var pool = '█▓▒░#@$%&z01';
+  document.querySelectorAll('.nav nav a').forEach(function(a){
+    var real = a.textContent;
+    a.addEventListener('pointerenter', function(){
+      var f = 0, id = setInterval(function(){
+        f++;
+        a.textContent = real.split('').map(function(ch,i){
+          return i < f / 1.5 ? ch : pool[Math.floor(Math.random()*pool.length)];
+        }).join('');
+        if (f / 1.5 > real.length) { clearInterval(id); a.textContent = real; }
+      }, 34);
     });
   });
 
-  /* marquee content (doubled for a seamless loop) */
-  var items = ['shielded by default','𝕏 @secretcoinzec','zero knowledge','privacy is normal','no surveillance','purple pill','orange flame','curtains closed','$SECRET'];
-  var line = items.map(function(t,i){ return (i%3===0 ? '<b>'+t+'</b>' : '<span>'+t+'</span>') + '<span>◆</span>'; }).join('');
-  document.getElementById('marq').innerHTML = line + line;
-
-  if (reduce) return;
-
-  /* headline scramble on load */
+  /* headline scramble */
   document.querySelectorAll('.scramble').forEach(function(el){
-    var final = el.dataset.final, pool = '█▓▒░#@$%&*zZ01', frame = 0;
+    var final = el.dataset.final, f = 0;
     var id = setInterval(function(){
-      frame++;
-      el.textContent = final.split('').map(function(ch, i){
-        if (ch === ' ') return ' ';
-        return i < frame / 2 ? ch : pool[Math.floor(Math.random() * pool.length)];
+      f++;
+      el.textContent = final.split('').map(function(ch,i){
+        return ch === ' ' ? ' ' : (i < f / 2 ? ch : pool[Math.floor(Math.random()*pool.length)]);
       }).join('');
-      if (frame / 2 > final.length) { clearInterval(id); el.textContent = final; }
+      if (f / 2 > final.length) { clearInterval(id); el.textContent = final; }
     }, 42);
   });
 
-  /* rotating cipher line */
+  /* typed cipher */
   var lines = [
-    'zs1q9w…proof verified · nothing revealed',
-    'note commitment accepted · viewing key withheld',
-    'balance: ██████ · owner: ██████ · status: fine',
-    'nullifier spent · observer learns nothing'
+    'proof verified · nothing revealed',
+    'balance ██████ · owner ██████ · status fine',
+    'nullifier spent · observer learns nothing',
+    'viewing key withheld · by design'
   ];
   var cip = document.getElementById('cipher'), li = 0, ci = 0, del = false;
   (function type(){
@@ -414,29 +467,50 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
     cip.textContent = t.slice(0, ci) + (ci < t.length ? '▌' : '');
     if (!del && ci < t.length) { ci++; setTimeout(type, 34); }
     else if (!del) { del = true; setTimeout(type, 1900); }
-    else if (ci > 0) { ci--; setTimeout(type, 16); }
-    else { del = false; li = (li + 1) % lines.length; setTimeout(type, 260); }
+    else if (ci > 0) { ci--; setTimeout(type, 15); }
+    else { del = false; li = (li + 1) % lines.length; setTimeout(type, 240); }
   })();
 
-  /* hex rain backdrop */
-  var cv = document.getElementById('rain'), ctx = cv.getContext('2d'), cols = [], size = 15;
+  /* backdrop: drifting motes + connecting threads + sparse hex rain */
+  var cv = document.getElementById('fx'), ctx = cv.getContext('2d'), motes = [], drops = [], W, H;
   function fit(){
-    cv.width = innerWidth; cv.height = innerHeight;
-    var n = Math.ceil(cv.width / size);
-    cols = new Array(n).fill(0).map(function(){ return Math.random() * -cv.height; });
+    W = cv.width = innerWidth; H = cv.height = innerHeight;
+    var n = Math.min(58, Math.round(W / 26));
+    motes = Array.from({length:n}, function(){
+      return {x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22, r:Math.random()*1.6+.5};
+    });
+    drops = Array.from({length:Math.round(W/70)}, function(){
+      return {x:Math.random()*W, y:Math.random()*-H, s:Math.random()*1.1+.5};
+    });
   }
   fit(); addEventListener('resize', fit);
   var chars = '0123456789abcdefz$';
   (function draw(){
-    ctx.fillStyle = 'rgba(13,7,23,.10)';
-    ctx.fillRect(0, 0, cv.width, cv.height);
-    ctx.font = size + "px 'JetBrains Mono', monospace";
-    for (var i = 0; i < cols.length; i++){
-      var ch = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillStyle = Math.random() > .93 ? 'rgba(244,130,10,.75)' : 'rgba(168,85,247,.38)';
-      ctx.fillText(ch, i * size, cols[i]);
-      cols[i] = cols[i] > cv.height + Math.random() * 400 ? 0 : cols[i] + size;
+    ctx.clearRect(0,0,W,H);
+    /* threads */
+    for (var i=0;i<motes.length;i++){
+      var a = motes[i];
+      a.x += a.vx; a.y += a.vy;
+      if (a.x < 0) a.x = W; if (a.x > W) a.x = 0;
+      if (a.y < 0) a.y = H; if (a.y > H) a.y = 0;
+      for (var j=i+1;j<motes.length;j++){
+        var b = motes[j], dx = a.x-b.x, dy = a.y-b.y, d2 = dx*dx + dy*dy;
+        if (d2 < 15000){
+          ctx.strokeStyle = 'rgba(150,100,240,' + (.13 * (1 - d2/15000)).toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = i % 9 === 0 ? 'rgba(244,130,10,.55)' : 'rgba(170,120,250,.4)';
+      ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.283); ctx.fill();
     }
+    /* sparse glyph rain */
+    ctx.font = "13px 'JetBrains Mono', monospace";
+    drops.forEach(function(d){
+      ctx.fillStyle = Math.random() > .9 ? 'rgba(244,130,10,.4)' : 'rgba(150,100,240,.22)';
+      ctx.fillText(chars[Math.floor(Math.random()*chars.length)], d.x, d.y);
+      d.y += d.s * 2.4;
+      if (d.y > H + 60){ d.y = -40; d.x = Math.random()*W; }
+    });
     requestAnimationFrame(draw);
   })();
 })();
